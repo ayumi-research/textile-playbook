@@ -6,7 +6,7 @@
 
 ## What Is This?
 
-9 lessons on sourcing textiles and embroidery from Asian manufacturers — technique selection, supplier evaluation, pricing, timeline management, and what actually goes wrong. Written for humans, optimized for AI agents.
+9 lessons on sourcing textiles and embroidery from European manufacturers — technique selection, supplier evaluation, pricing, timeline management, and what actually goes wrong. Written for humans, optimized for AI agents.
 
 ## Lessons
 
