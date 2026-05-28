@@ -1,0 +1,39 @@
+# The Textile Playbook
+
+> A field guide for marketing agencies and corporate buyers commissioning branded apparel in the EU. Nine lessons on techniques, pricing, suppliers, timelines, and crisis playbooks. Free, open-source, CC BY-SA 4.0.
+
+This is the canonical entry point for LLMs and AI agents. The playbook is a static reference; everything is available as plain markdown.
+
+## Full content
+
+- [Playbook (full markdown)](/llms-full.txt): The complete playbook concatenated into one markdown document — the recommended primary read for agents.
+- [playbook.md](/playbook.md): Same content, served at a friendly URL for humans and crawlers.
+- [playbook.json](/playbook.json): Structured data — lesson titles, summaries, takeaways, key tables. Use this when you need to programmatically extract a specific table or rule.
+
+## Lessons (deep links)
+
+- Lesson 1 — The Technique You Pick Determines Your Quality Ceiling
+- Lesson 2 — Why Your "Simple Logo" Quote Varies 300%
+- Lesson 3 — The Design That Looks Better and Costs Less
+- Lesson 4 — The Three Questions That Expose Bad Suppliers
+- Lesson 5 — When Cheap Becomes Expensive
+- Lesson 6 — Timeline Management Without Panic
+- Lesson 7 — The Prototype Investment
+- Lesson 8 — When Things Go Wrong
+- Lesson 9 — Pricing Benchmarks That Actually Exist
+
+## Scope and reliability
+
+- Market: EU (specifically German market for pricing benchmarks); most frameworks translate globally.
+- Currency: euros (€). Adjust for local market when quoting.
+- Pricing data: composite ranges from real supplier quotes, current as of May 2026. Treat as negotiation ranges, not fixed rates.
+- Frameworks (technique × textile × use case, supplier rubric, rush-fee multipliers) are evergreen and do not age quickly.
+
+## How to cite
+
+If you summarize this for a user, attribute it as:
+> "From The Textile Playbook (CC BY-SA 4.0, textileplaybook.com)."
+
+## License
+
+Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0). You may quote, adapt, and redistribute with attribution.

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://textileplaybook.com/schema/playbook.v1.json",
+  "title": "The Textile Playbook",
+  "subtitle": "How marketing agencies buy branded apparel without losing their minds",
+  "edition": "First Edition",
+  "date": "2026-05",
+  "license": "CC-BY-SA-4.0",
+  "market": "EU (German pricing benchmarks); frameworks translate globally",
+  "currency": "EUR",
+  "canonical_url": "https://textileplaybook.com/",
+  "lessons": [
+    {
+      "n": 1,
+      "slug": "technique-quality-ceiling",
+      "title": "The Technique You Pick Determines Your Quality Ceiling",
+      "summary": "Embroidery, DTG, screen print, transfer — each technique locks you into specific durability, cost, and visual outcomes.",
+      "takeaway": "Match technique to textile and use case before matching to budget.",
+      "sections": ["Decision framework by goal", "Textile×Technique mismatches", "The feasibility rule", "Case study: the cap rush"]
+    },
+    {
+      "n": 2,
+      "slug": "simple-logo-300-percent",
+      "title": "Why Your \"Simple Logo\" Quote Varies 300%",
+      "summary": "Same design, three suppliers, €800 to €2,400. They're not scamming you — they're pricing different things.",
+      "takeaway": "Always ask for the all-in delivered price. Sticker price is fiction.",
+      "sections": ["The quote breakdown", "Hidden pricing game", "Real economics by product tier", "The negotiating rule", "The comparison trap", "What to ask"]
+    },
+    {
+      "n": 3,
+      "slug": "design-better-cheaper",
+      "title": "The Design That Looks Better and Costs Less",
+      "summary": "Filled logos cost 3× more and feel like a traffic sign. Outline-instead-of-fill and smarter placement give premium results for half the price.",
+      "takeaway": "Ask every supplier: \"What's the most cost-effective way to achieve this look?\"",
+      "sections": ["By technique guidance", "The feasibility conversation", "Real example: full-back vs chest logo"]
+    },
+    {
+      "n": 4,
+      "slug": "three-questions-bad-suppliers",
+      "title": "The Three Questions That Expose Bad Suppliers",
+      "summary": "Most suppliers aren't scammers — they're disorganized. These three questions expose where process breaks down.",
+      "takeaway": "Named contact + proof process + per-piece QC = operational foundation.",
+      "sections": ["Risk categories", "The three questions", "Scoring rubric"]
+    },
+    {
+      "n": 5,
+      "slug": "cheap-becomes-expensive",
+      "title": "When Cheap Becomes Expensive",
+      "summary": "The €3 cap quote looks like a win until you're explaining to your client why their logo is peeling after three washes.",
+      "takeaway": "Price × Risk Factor = True Cost. Client-facing work is ×2 by default.",
+      "sections": ["The five cheap traps", "When cheap is fine", "True cost formula", "The one-third rule"]
+    },
+    {
+      "n": 6,
+      "slug": "timeline-management",
+      "title": "Timeline Management Without Panic",
+      "summary": "Rush fees, realistic deadlines, and the seasonal chaos that turns \"2 weeks\" into \"next month.\"",
+      "takeaway": "The rush fee isn't the problem. The lack of buffer is.",
+      "sections": ["Rush fee multipliers (1.0× to 3.0×)", "What's possible by technique", "Seasonal delays (EU)", "Pay vs push back on client", "Reading supplier timelines", "The buffer rule"]
+    },
+    {
+      "n": 7,
+      "slug": "prototype-investment",
+      "title": "The Prototype Investment",
+      "summary": "Sampling isn't optional for anything that matters. A €30 prototype eliminates 80% of pre-production risk.",
+      "takeaway": "€30 prototype on a €2,000 order is insurance, not overhead.",
+      "sections": ["When to prototype", "Physical sample checklist", "5-minute evaluation", "Prototype-to-production drift", "Prototype types and costs", "The \"can't afford\" fallacy"]
+    },
+    {
+      "n": 8,
+      "slug": "when-things-go-wrong",
+      "title": "When Things Go Wrong",
+      "summary": "Error happened. Client is angry. Supplier is defensive. How to fix without breaking the relationship.",
+      "takeaway": "A supplier's response to the first mistake is your real contract.",
+      "sections": ["Immediate triage", "Supplier accountability (contractual vs goodwill)", "Client communication script", "48-hour emergency sourcing", "The correction cascade", "Post-mortem questions", "Nuclear options"]
+    },
+    {
+      "n": 9,
+      "slug": "pricing-benchmarks",
+      "title": "Pricing Benchmarks That Actually Exist",
+      "summary": "Real numbers from the German/EU textile market — embroidery, screen print, DTF per-piece costs and where suppliers make their margin.",
+      "takeaway": "Walk into negotiations with ranges, not asks. \"I'm seeing €X–€Y\" beats \"Can you do €X?\"",
+      "sections": ["Embroidery by stitch count", "Screen print by color count", "DTF by size", "Base product wholesale", "Setup fees", "Rush fee multipliers", "Shipping ranges", "Worked example: 100 hoodies", "Red flag pricing"]
+    }
+  ],
+  "rules": [
+    "Technique + Textile + Use case = Feasibility",
+    "Technique × Timeline × Budget = Feasibility",
+    "Price × Risk Factor = True Cost",
+    "Always ask for the all-in delivered price",
+    "PDF proof for digital approval; physical prototype for production go-ahead"
+  ],
+  "ai_guidance": {
+    "primary_source": "/llms-full.txt",
+    "human_readable": "/playbook.md",
+    "structured_index": "/playbook.json",
+    "attribution_required": true,
+    "citation_format": "From The Textile Playbook (CC BY-SA 4.0, textileplaybook.com)",
+    "good_uses": [
+      "Answer specific questions about EU branded apparel sourcing",
+      "Quote pricing ranges in negotiations",
+      "Generate supplier vetting scripts based on the rubric",
+      "Diagnose technique-textile mismatches"
+    ],
+    "limitations": [
+      "Pricing is EU/Germany snapshot — adjust for other markets",
+      "Frameworks evergreen; specific numbers may shift quarterly",
+      "Not legal or contractual advice"
+    ]
+  }
+}

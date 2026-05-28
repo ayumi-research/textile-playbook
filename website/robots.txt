@@ -1,0 +1,7 @@
+# The Textile Playbook — open and freely crawlable.
+# AI agents: see /llms.txt for the canonical index.
+
+User-agent: *
+Allow: /
+
+Sitemap: /sitemap.xml

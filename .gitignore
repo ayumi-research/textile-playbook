@@ -1,0 +1,29 @@
+# Secrets (SSH keys, passwords, tokens)
+secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+node_modules/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.bak*
+*.BAK
+
+# Local-only drafts
+*.swp
+*.swo
+*~
+
+# Infrastructure local overrides
+infrastructure/.env
+infrastructure/docker-compose.yml.bak*
