@@ -40,13 +40,16 @@ curl https://textileplaybook.com/playbook.json
 
 ```
 textile-playbook/
-├── content/          # Source lessons (markdown)
-├── website/          # Live site files (JSX, HTML, CSS)
-├── infrastructure/   # Docker, nginx, deployment
-├── legal/            # Privacy, terms, impressum
-├── assets/           # Images, fonts, illustrations
-├── LICENSE.md        # Dual license (CC BY-SA 4.0 + MIT)
-└── README.md         # This file
+├── website/
+│   ├── playbook.md        # Full playbook (markdown)
+│   ├── playbook.json      # Structured data (JSON)
+│   ├── llms.txt           # Canonical index for LLMs
+│   ├── llms-full.txt      # Full text dump for RAG
+│   ├── agents.html        # Agent guide
+│   ├── robots.txt         # Robot discovery
+│   └── privacy-policy.html / terms.html / impressum.html
+├── LICENSE.md             # Dual license (CC BY-SA 4.0 + MIT)
+└── README.md              # This file
 ```
 
 ## License
