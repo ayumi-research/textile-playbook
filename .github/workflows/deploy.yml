@@ -1,0 +1,56 @@
+name: Deploy to VPS
+
+# Regenerate the static lesson pages + sitemap from content.jsx, then rsync the
+# whole website/ tree to the production VPS. Runs on pushes to main (and manual).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys run at once; don't cancel an in-flight rsync mid-copy.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build & rsync to VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Regenerate website/lessons/*.html and website/sitemap.xml so the deployed
+      # tree always matches the current content.jsx — never ship stale pre-renders.
+      - name: Build static lesson pages + sitemap
+        run: node scripts/build-lessons.js
+
+      - name: Configure SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          # Pin the VPS host key so ssh can't be MITM'd and won't prompt.
+          ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      # Trailing slash copies the *contents* of website/ into VPS_TARGET rather
+      # than nesting a website/ subdirectory.
+      # NOTE: --delete is intentionally omitted so VPS-only files (e.g.
+      # contact.html, which is linked but not in the repo) are preserved. Once the
+      # repo fully mirrors the VPS, add `--delete` to prune stale files.
+      - name: Deploy with rsync
+        run: |
+          rsync -avz \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+            website/ \
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_TARGET }}"
+
+      - name: Remove deploy key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key

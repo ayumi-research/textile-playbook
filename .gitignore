@@ -1,22 +1,21 @@
 # Secrets
 secrets/
 
-# Site build files (deployed to VPS, not in repo)
-website/index.html
-website/reader.html
-website/playbook.html
-website/book-hud.jsx
-website/book-shell.jsx
-website/content.jsx
-website/playbook.jsx
-website/contact.html
-website/thanks.html
-website/fonts/
-website/favicon.svg
-
-# Process files
+# Process files (private working material — not for the public repo)
 content/
 legal/
 
 # OS files
 .DS_Store
+
+# NOTE (rework/full-source-sync):
+# The website source (index.html, playbook.html, *.jsx, content.jsx, fonts,
+# favicon) used to be gitignored as "deployed to VPS, not in repo." That made
+# the repo non-self-contained: CI cannot run scripts/build-lessons.js (needs
+# content.jsx) and cannot deploy the homepage/reader. To enable CI deploy and
+# keep one source of truth, those files are now tracked. The lesson content is
+# already public via playbook.md / playbook.json / llms-full.txt, so this
+# exposes no new content. If you'd rather keep website source out of the public
+# repo, re-add the entries below and deploy that source to the VPS out-of-band:
+#   website/index.html  website/playbook.html  website/*.jsx
+#   website/fonts/  website/favicon.svg
