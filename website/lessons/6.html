@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 6: Timeline Management Without Panic — The Textile Playbook</title>
+<meta name="description" content="Rush fees, realistic deadlines, and the seasonal chaos that turns “2 weeks” into “next month.” Learn to read supplier timelines before they cost you the…">
+<link rel="canonical" href="https://textileplaybook.com/lessons/6.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lesson 6: Timeline Management Without Panic — The Textile Playbook">
+<meta property="og:description" content="Rush fees, realistic deadlines, and the seasonal chaos that turns “2 weeks” into “next month.” Learn to read supplier timelines before they cost you the…">
+<meta property="og:url" content="https://textileplaybook.com/lessons/6.html">
+<meta property="og:site_name" content="The Textile Playbook">
+<meta property="og:image" content="https://textileplaybook.com/favicon.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lesson 6: Timeline Management Without Panic — The Textile Playbook">
+<meta name="twitter:description" content="Rush fees, realistic deadlines, and the seasonal chaos that turns “2 weeks” into “next month.” Learn to read supplier timelines before they cost you the…">
+<link rel="stylesheet" href="/fonts/local-fonts.css">
+<style>
+  :root{
+    --paper:#fafaf7;--paper-alt:#f3f3ee;--ink:#0a0a0a;--ink2:#1c1c1c;--mute:#707070;
+    --rule:#d4d4d0;--accent:#1a4eff;--accent-soft:#e6ecff;
+    --sans:'Space Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  /* Top bar */
+  .topbar{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--ink);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1px;text-transform:uppercase;
+    background:var(--paper);position:sticky;top:0;z-index:50;}
+  .topbar>div{padding:12px 24px;display:flex;align-items:center;gap:8px;}
+  .topbar>div+div{border-left:1px solid var(--ink);}
+  .topbar a{text-decoration:none;color:var(--ink);}
+  .topbar a:hover{color:var(--accent);}
+  .topbar .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;}
+
+  /* Lesson hero */
+  .lhero{background:var(--ink);color:#fff;border-bottom:4px solid var(--accent);}
+  .lhero-in{max-width:880px;margin:0 auto;padding:34px 24px;display:flex;gap:22px;align-items:center;}
+  .lhero-n{font-family:var(--mono);font-size:84px;font-weight:700;color:var(--accent);line-height:.9;letter-spacing:-4px;}
+  .lhero-k{font-family:var(--mono);font-size:11px;letter-spacing:.2px;text-transform:uppercase;color:#aaa;margin-bottom:4px;}
+  .lhero h1{font-size:clamp(26px,4.4vw,34px);font-weight:600;line-height:1.05;letter-spacing:-.7px;margin:0;}
+
+  /* Meta (summary / saves / bottom line / reading time) */
+  .meta{padding:30px 0 8px;}
+  .meta-row{display:grid;grid-template-columns:130px 1fr;gap:16px;border-top:1px solid var(--ink);padding:14px 0;}
+  .meta-k{font-family:var(--mono);font-size:10px;letter-spacing:.2px;text-transform:uppercase;color:var(--accent);}
+  .meta .summary{font-size:16px;font-weight:500;line-height:1.5;}
+  .meta .saves{font-size:13.5px;line-height:1.55;color:var(--mute);}
+  .bottomline{background:var(--ink);color:#fff;padding:14px 18px;display:grid;grid-template-columns:130px 1fr;gap:16px;margin-top:6px;}
+  .bottomline .meta-k{color:var(--accent);}
+  .bottomline .bl-v{font-size:15px;font-weight:500;line-height:1.4;}
+  .rt{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;
+    letter-spacing:.15px;text-transform:uppercase;color:var(--mute);margin-top:18px;}
+  .rt span{padding:3px 8px;border:1px solid var(--rule);}
+
+  /* Section scaffolding */
+  .body{padding:18px 0 10px;}
+  .sec{margin-bottom:26px;}
+  .sechead{display:flex;gap:10px;align-items:baseline;border-top:2px solid var(--ink);padding-top:10px;margin-bottom:14px;}
+  .sechead-t{flex:1;}
+  .sechead h2{font-size:20px;font-weight:600;letter-spacing:-.3px;line-height:1.15;margin:0;}
+  .sechead-sub{font-family:var(--mono);font-size:10px;color:var(--mute);letter-spacing:.1px;margin-top:2px;}
+  .tag{display:inline-block;padding:3px 8px;background:var(--accent);color:#fff;font-family:var(--mono);
+    font-size:9px;letter-spacing:.15px;text-transform:uppercase;font-weight:500;white-space:nowrap;}
+  .box{border:1px solid var(--ink);background:#fff;}
+  .foot{margin:8px 0 0;font-family:var(--mono);font-size:10px;color:var(--mute);line-height:1.5;}
+  .banner{margin-top:10px;padding:9px 12px;background:var(--accent);color:#fff;font-size:13px;font-weight:500;text-align:center;}
+  .banner.dark{background:var(--ink);}
+  .banner.accent{background:var(--accent);}
+  .para{font-size:13.5px;line-height:1.6;margin:0;padding:2px 0;}
+
+  /* Tables */
+  table.t{width:100%;border-collapse:collapse;border:1px solid var(--ink);}
+  table.t thead th{background:var(--ink);color:#fff;font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;
+    text-transform:uppercase;font-weight:500;text-align:left;padding:6px 10px;border-right:1px solid #555;}
+  table.t thead th:last-child{border-right:none;}
+  table.t td{padding:9px 10px;border-top:1px solid var(--rule);border-right:1px solid var(--rule);
+    font-size:11.5px;line-height:1.45;vertical-align:top;}
+  table.t td:last-child{border-right:none;}
+  table.t tbody tr:nth-child(even){background:var(--paper);}
+  table.t td:first-child{font-weight:600;font-size:12px;}
+  table.t td.num{font-family:var(--mono);text-align:right;font-weight:500;}
+  table.t th.num{text-align:right;}
+  table.t td.note{font-family:var(--mono);font-size:10.5px;color:var(--mute);}
+  table.t td.hl{background:var(--accent-soft);}
+  table.t tr.total td{background:var(--accent);color:#fff;font-weight:600;font-size:13px;border-right-color:rgba(255,255,255,.25);}
+  table.t tr.total td.num{font-size:14px;}
+
+  /* Rule */
+  .rule-box{background:var(--ink);color:#fff;padding:16px;}
+  .rule-head{display:flex;gap:8px;align-items:baseline;margin-bottom:10px;}
+  .rule-head strong{font-size:18px;font-weight:600;letter-spacing:-.2px;}
+  .rule-body{color:var(--accent);font-size:14px;font-weight:500;margin-bottom:12px;}
+  .rule-list{display:grid;grid-template-columns:160px 1fr;gap:8px 16px;margin:0;}
+  .rule-list dt{font-family:var(--mono);font-size:10px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);}
+  .rule-list dd{margin:0;font-size:12.5px;line-height:1.45;color:#eee;}
+
+  /* Key/value rows (story, script, buffer, hours) */
+  .kv .kv-row{display:grid;grid-template-columns:130px 1fr;border-bottom:1px solid var(--rule);}
+  .kv .kv-row:last-child{border-bottom:none;}
+  .kv-k{padding:10px 12px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:10px;
+    letter-spacing:.15px;text-transform:uppercase;}
+  .kv-k.accent{background:var(--accent);}
+  .kv-v{padding:10px 12px;font-size:12.5px;line-height:1.5;}
+  .kv .kv-row.hl .kv-v{background:var(--accent-soft);}
+
+  /* Columns (cols2/cols3) */
+  .cols2{display:grid;grid-template-columns:1fr 1fr;}
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);}
+  .cols2>.col,.cols2>.bullet,.cols2>.check{border-right:1px solid var(--rule);}
+  .cols2>*:nth-child(2n){border-right:none;}
+  .cols3>.col{border-right:1px solid var(--ink);}
+  .cols3>.col:last-child{border-right:none;}
+  .col.soft{background:var(--accent-soft);}
+  .colhead{padding:8px 12px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:10px;
+    letter-spacing:.15px;text-transform:uppercase;}
+  .colhead.accent{background:var(--accent);}
+  .col-body{padding:12px;}
+  .col-li{font-size:12px;line-height:1.5;padding:5px 0;border-bottom:1px solid var(--rule);}
+  .col-li:last-child{border-bottom:none;}
+
+  /* Bullets */
+  .bullet{padding:10px 12px;border-bottom:1px solid var(--rule);}
+  .cols2>.bullet:nth-last-child(-n+2){border-bottom:none;}
+  .bullet-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);margin-bottom:3px;}
+  .bullet-v{font-size:12px;line-height:1.4;}
+
+  /* Numbered list */
+  ol.numlist{list-style:none;margin:0;padding:0;}
+  ol.numlist li{display:flex;gap:10px;padding:8px 12px;border-bottom:1px solid var(--rule);font-size:12px;line-height:1.5;}
+  ol.numlist li:last-child{border-bottom:none;}
+  ol.numlist li:nth-child(even){background:var(--paper);}
+  .li-n{font-family:var(--mono);font-size:10px;color:var(--accent);font-weight:500;flex-shrink:0;width:20px;}
+
+  /* Three-col items */
+  .tc-li{margin-bottom:8px;padding-bottom:8px;border-bottom:1px dotted var(--rule);}
+  .tc-li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .tc-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.12px;text-transform:uppercase;color:var(--accent);margin-bottom:2px;}
+  .tc-v{font-size:11.5px;line-height:1.45;}
+
+  /* Economics */
+  .econ-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .econ-card{border:1px solid var(--ink);background:#fff;}
+  .econ-title{padding:8px 12px;border-bottom:1px solid var(--ink);font-weight:600;font-size:13px;}
+  .econ-row{display:flex;justify-content:space-between;padding:6px 12px;border-bottom:1px solid var(--rule);}
+  .econ-k{font-family:var(--mono);font-size:10px;color:var(--mute);text-transform:uppercase;}
+  .econ-v{font-family:var(--mono);font-size:12px;font-weight:500;}
+  .econ-note{padding:8px 12px;background:var(--accent-soft);font-size:11px;line-height:1.4;}
+
+  /* Compare */
+  .cmp-title{font-size:13px;font-weight:500;margin-bottom:10px;line-height:1.35;}
+  .cmp-stat{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dotted var(--rule);
+    font-family:var(--mono);font-size:11px;}
+  .cmp-stat:last-child{border-bottom:none;}
+  .cmp-stat span:first-child{color:var(--mute);}
+
+  /* Asks */
+  .ask{padding:10px 12px;border-bottom:1px solid var(--rule);font-size:13px;line-height:1.5;}
+  .ask:last-child{border-bottom:none;}
+  .ask-n{font-family:var(--mono);font-size:10px;color:var(--accent);margin-right:8px;}
+  .redflag{margin-top:10px;padding:12px;background:var(--ink);color:#fff;}
+  .redflag-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;}
+  .redflag div:last-child{font-size:12px;line-height:1.45;}
+
+  /* Questions */
+  .qcard{border:1px solid var(--ink);margin-bottom:10px;}
+  .qhead{padding:8px 12px;background:var(--ink);color:#fff;display:flex;gap:10px;align-items:baseline;font-size:12.5px;line-height:1.4;}
+  .qlevels{display:grid;grid-template-columns:repeat(3,1fr);}
+  .qlevel{padding:10px;border-right:1px solid var(--rule);font-size:11px;line-height:1.4;}
+  .qlevel:last-child{border-right:none;}
+  .qlevel-0{background:var(--accent-soft);}
+  .qlevel-2{background:var(--paper);}
+  .qlevel-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;font-weight:500;margin-bottom:4px;}
+  .qlevel-0 .qlevel-k{color:var(--accent);}
+  .qlevel-1 .qlevel-k{color:var(--mute);}
+  .qgap{padding:6px 12px;background:var(--paper);border-top:1px solid var(--rule);font-family:var(--mono);font-size:10px;color:var(--mute);line-height:1.5;}
+
+  /* Rubric scores */
+  .scores{margin-top:10px;}
+  .score{padding:10px;border-right:1px solid var(--rule);}
+  .score:last-child{border-right:none;}
+  .score-0{background:var(--accent);color:#fff;}
+  .score-1{background:var(--accent-soft);}
+  .score-2{background:var(--paper);}
+  .score-n{font-family:var(--mono);font-size:14px;font-weight:600;}
+  .score div:last-child{font-size:11px;margin-top:2px;}
+
+  /* Traps */
+  .trap{border:1px solid var(--ink);margin-bottom:10px;background:#fff;}
+  .trap-head{display:grid;grid-template-columns:50px 1fr;background:var(--ink);color:#fff;}
+  .trap-n{padding:8px 10px;background:var(--accent);font-family:var(--mono);font-size:16px;font-weight:700;text-align:center;display:flex;align-items:center;justify-content:center;}
+  .trap-title{padding:8px 12px;}
+  .trap-title strong{font-size:13.5px;font-weight:600;display:block;line-height:1.2;}
+  .trap-title span{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);}
+  .trap-body{padding:12px;}
+  .trap-pitch{font-size:12px;font-style:italic;color:var(--mute);margin-bottom:8px;}
+  .trap-reality{border:1px solid var(--rule);margin-bottom:8px;}
+  .trap-r{display:grid;grid-template-columns:60px 1fr;border-bottom:1px solid var(--rule);}
+  .trap-r:last-child{border-bottom:none;}
+  .trap-r-k{padding:5px 8px;background:var(--accent);color:#fff;font-family:var(--mono);font-size:11px;font-weight:600;}
+  .trap-r span:last-child{padding:5px 10px;font-size:11.5px;}
+  .trap-math{font-family:var(--mono);font-size:11px;margin-bottom:4px;}
+  .trap-math-k{color:var(--accent);font-weight:600;margin-right:8px;}
+  .trap-actual{font-family:var(--mono);font-size:10.5px;line-height:1.5;background:var(--paper);padding:8px;margin-bottom:6px;}
+  .trap-hidden{font-size:11.5px;line-height:1.5;margin-bottom:6px;}
+  .trap-rule{background:var(--ink);color:#fff;padding:6px 10px;font-size:12px;font-weight:500;}
+  .trap-rule-k{color:var(--accent);font-family:var(--mono);font-size:10px;margin-right:8px;letter-spacing:.15px;text-transform:uppercase;}
+
+  /* Checklist */
+  .check{padding:10px;border-bottom:1px solid var(--rule);display:flex;gap:10px;}
+  .cols2>.check:nth-last-child(-n+2){border-bottom:none;}
+  .check-box{width:14px;height:14px;border:1.5px solid var(--ink);background:var(--accent);flex-shrink:0;margin-top:2px;}
+  .check-t{font-size:12px;font-weight:600;}
+  .check-d{font-size:11px;color:var(--mute);line-height:1.4;}
+
+  /* Timeline */
+  .tl-row{display:grid;grid-template-columns:130px 1fr 1.2fr;border-bottom:1px solid var(--rule);}
+  .tl-row:last-child{border-bottom:none;}
+  .tl-lvl{padding:8px 12px;color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.15px;text-transform:uppercase;font-weight:500;}
+  .tl-lvl-0{background:#b00020;}.tl-lvl-1{background:#d97706;}.tl-lvl-2{background:var(--accent);}
+  .tl-phrase{padding:8px 12px;font-size:12.5px;font-weight:500;border-right:1px solid var(--rule);}
+  .tl-mean{padding:8px 12px;font-size:11.5px;color:var(--mute);line-height:1.4;}
+
+  /* Example trap amounts */
+  .ex-amt{font-family:var(--mono);font-size:16px;font-weight:600;margin-bottom:4px;}
+  .col.soft .ex-amt{color:var(--accent);}
+  .ex-note{font-size:11px;color:var(--mute);line-height:1.4;}
+
+  /* Script */
+  .script-box{margin-top:10px;padding:12px;background:var(--accent-soft);border-left:3px solid var(--accent);}
+  .script-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;}
+  .script-v{font-size:13px;line-height:1.45;}
+  .script-note{margin-top:4px;font-family:var(--mono);font-size:10px;color:var(--mute);}
+
+  /* Prev / next + reader CTA */
+  .lnav{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);margin:30px 0;}
+  .lnav a{padding:16px 18px;text-decoration:none;display:flex;flex-direction:column;gap:4px;background:#fff;transition:background .12s ease;}
+  .lnav a:hover{background:var(--accent-soft);}
+  .lnav a.next{text-align:right;border-left:1px solid var(--ink);}
+  .lnav-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);}
+  .lnav-t{font-size:13px;font-weight:600;line-height:1.25;}
+  .reader-cta{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+    background:var(--ink);color:#fff;padding:18px 22px;margin:30px 0;text-decoration:none;}
+  .reader-cta:hover{background:var(--ink2);}
+  .reader-cta .k{font-family:var(--mono);font-size:10px;letter-spacing:.15px;text-transform:uppercase;color:var(--accent);}
+  .reader-cta .t{font-size:18px;font-weight:600;letter-spacing:-.3px;}
+
+  /* Index page */
+  .ix-hero{padding:48px 0 36px;}
+  .ix-hero h1{font-size:clamp(40px,7vw,72px);font-weight:700;letter-spacing:-2.5px;line-height:.9;margin:0 0 16px;}
+  .ix-hero h1 .p{color:var(--accent);}
+  .ix-hero p{font-size:17px;line-height:1.5;color:var(--ink2);max-width:620px;margin:0;}
+  .ix-list{border-top:1px solid var(--ink);border-left:1px solid var(--ink);margin-bottom:30px;}
+  .ix-item{display:grid;grid-template-columns:64px 1fr auto;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);
+    text-decoration:none;background:#fff;transition:background .12s ease;}
+  .ix-item:hover{background:var(--accent-soft);}
+  .ix-n{padding:18px;font-family:var(--mono);font-size:15px;font-weight:600;color:var(--accent);border-right:1px solid var(--rule);}
+  .ix-main{padding:16px 18px;}
+  .ix-t{font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1.2;margin-bottom:4px;}
+  .ix-l{font-size:12.5px;color:var(--mute);line-height:1.45;}
+  .ix-arr{padding:18px;display:flex;align-items:center;font-family:var(--mono);font-size:11px;color:var(--accent);text-transform:uppercase;}
+
+  /* Footer */
+  .foot-bar{border-top:1px solid var(--ink);font-family:var(--mono);font-size:10px;letter-spacing:.15px;
+    text-transform:uppercase;color:var(--ink);display:grid;grid-template-columns:repeat(3,1fr);}
+  .foot-bar>div{padding:16px 24px;border-right:1px solid var(--ink);}
+  .foot-bar>div:last-child{border-right:none;text-align:right;}
+  .foot-bar a{text-decoration:none;}
+  .foot-bar a:hover{color:var(--accent);}
+  .foot-bar .lic{color:var(--accent);}
+
+  @media (max-width:640px){
+    .cols2,.cols3,.econ-grid,.qlevels,.lnav,.ix-item,.foot-bar,.tl-row{grid-template-columns:1fr;}
+    .cols2>*,.cols3>.col{border-right:none;}
+    .lnav a.next{text-align:left;border-left:none;border-top:1px solid var(--ink);}
+    .tl-phrase{border-right:none;}
+    .meta-row,.bottomline,.kv .kv-row,.rule-list,.trap-head,.trap-r,.ix-item{grid-template-columns:1fr;}
+    .lhero-n{font-size:64px;}
+    .foot-bar>div{border-right:none;border-bottom:1px solid var(--ink);text-align:left;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "Timeline Management Without Panic",
+  "headline": "Lesson 6: Timeline Management Without Panic",
+  "description": "Rush fees, realistic deadlines, and the seasonal chaos that turns “2 weeks” into “next month.” Learn to read supplier timelines before they cost you the client relationship.",
+  "url": "https://textileplaybook.com/lessons/6.html",
+  "datePublished": "2026-05-01",
+  "dateModified": "2026-05-29",
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "The Textile Playbook"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Textile Playbook"
+  },
+  "isPartOf": {
+    "@type": "Book",
+    "name": "The Textile Playbook",
+    "url": "https://textileplaybook.com/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <div><span class="dot"></span> textileplaybook.com / <a href="/">home</a> · <a href="/lessons/">lessons</a></div>
+  <div><a href="/agents.html">For AI agents →</a></div>
+</div>
+<header class="lhero">
+  <div class="lhero-in">
+    <div class="lhero-n">06</div>
+    <div>
+      <div class="lhero-k">Lesson 6 of 9 · The Textile Playbook</div>
+      <h1>Timeline Management Without Panic</h1>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="meta">
+    <div class="meta-row"><div class="meta-k">Quick summary</div><div class="summary">Rush fees, realistic deadlines, and the seasonal chaos that turns “2 weeks” into “next month.” Learn to read supplier timelines before they cost you the client relationship.</div></div>
+    <div class="meta-row"><div class="meta-k">Why it saves</div><div class="saves">Every rushed order is a risk multiplier. The fee isn't the problem — the lack of buffer is.</div></div>
+    <div class="bottomline"><div class="meta-k">Bottom line</div><div class="bl-v">The rush fee isn’t the problem. The lack of buffer is.</div></div>
+    <div class="rt"><span>≈ 2 min read</span></div>
+  </div>
+
+  <a class="reader-cta" href="/playbook.html" onclick="try{localStorage.setItem('textile_page',String(12))}catch(e){}">
+    <span><span class="k">Prefer the paged experience?</span><br><span class="t">Open in interactive reader →</span></span>
+    <span class="k">Keyboard nav · jump menu</span>
+  </a>
+
+  <div class="body">
+<section class="sec"><div class="sechead"><span class="tag">table</span><div class="sechead-t"><h2>The Rush Fee Structure</h2></div></div><table class="t"><thead><tr><th>Timeline</th><th>Fee multiplier</th><th>When it applies</th></tr></thead><tbody><tr><td>Standard (3–4 weeks)</td><td>1.0×</td><td>Baseline, planned orders</td></tr><tr><td>Expedited (2 weeks)</td><td>1.25–1.5×</td><td>Most suppliers can accommodate</td></tr><tr><td>Rush (1 week)</td><td>1.5–2.0×</td><td>Requires dedicated machines</td></tr><tr><td>Emergency (3 days)</td><td>2.0–3.0×</td><td>Or “impossible” — depending on supplier</td></tr></tbody></table><p class="foot">→ Rush fees don't guarantee quality. They guarantee speed. The shortcut often skips QC.</p></section>
+<section class="sec"><div class="sechead"><span class="tag">technique</span><div class="sechead-t"><h2>What's Actually Possible</h2></div></div><div class="box cols3"><div class="col"><div class="colhead">Embroidery</div><div class="col-body"><div class="tc-li"><div class="tc-k">Small (50–100)</div><div class="tc-v">5–7 days standard, 3 days rush</div></div><div class="tc-li"><div class="tc-k">Large (500+)</div><div class="tc-v">2–3 weeks standard, 1 week rush if machines available</div></div><div class="tc-li"><div class="tc-k">Hard limit</div><div class="tc-v">A 12-head machine does ≈500 caps/day. Booked is booked.</div></div></div></div><div class="col"><div class="colhead accent">Screen / DTF</div><div class="col-body"><div class="tc-li"><div class="tc-k">Small order</div><div class="tc-v">3–5 days standard, 2 days rush</div></div><div class="tc-li"><div class="tc-k">Large order</div><div class="tc-v">1–2 weeks standard, 1 week rush</div></div><div class="tc-li"><div class="tc-k">Hard limit</div><div class="tc-v">Each color = screen = setup time</div></div></div></div><div class="col"><div class="colhead">“In stock” vs sourced</div><div class="col-body"><div class="tc-li"><div class="tc-k">In stock</div><div class="tc-v">Product in their warehouse — decoration only timeline</div></div><div class="tc-li"><div class="tc-k">Sourced</div><div class="tc-v">From wholesaler — add 3–7 days</div></div><div class="tc-li"><div class="tc-k">Custom / imported</div><div class="tc-v">From manufacturer — add 2–6 weeks</div></div></div></div></div><p class="foot">→ “We can get those jackets” = “We know where to order them.” Add the shipping time.</p></section>
+<section class="sec"><div class="sechead"><span class="tag">table</span><div class="sechead-t"><h2>Seasonal Delays (European Market)</h2></div></div><table class="t"><thead><tr><th>Period</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td>August summer holidays</td><td>Most EU suppliers closed 2–4 weeks</td><td>Plan around August, order by July 15</td></tr><tr><td>Christmas / New Year</td><td>Queue stretches, rush fees spike</td><td>Order by November 15</td></tr><tr><td>Easter week</td><td>Production slows, variable dates</td><td>Check calendar, add buffer</td></tr><tr><td>Trade show season</td><td>Suppliers prioritize large orders</td><td>Small orders wait</td></tr></tbody></table></section>
+<section class="sec"><div class="sechead"><span class="tag">compare</span><div class="sechead-t"><h2>Pay Rush Fees vs. Push Back on Client</h2></div></div><div class="box cols2"><div class="col"><div class="colhead">Pay the fee when</div><div class="col-body"><div class="col-li">→ Client deadline is immovable — event, launch</div><div class="col-li">→ Order is small — rush fee &lt;10% of total</div><div class="col-li">→ Supplier history of rush quality you trust</div></div></div><div class="col"><div class="colhead accent">Push back when</div><div class="col-body"><div class="col-li">→ Client is compressing unnecessarily (“we just decided”)</div><div class="col-li">→ Rush fee exceeds 25% of order value</div><div class="col-li">→ Supplier has no rush track record with you</div></div></div></div><div class="script-box"><div class="script-k">Script</div><div class="script-v">“We can meet Thursday, but it requires a rush fee of €X and carries quality risk. I recommend Monday for the same result at standard price. What's driving the Thursday deadline?”</div><div class="script-note">You're not saying no. You're making them own the risk.</div></div></section>
+<section class="sec"><div class="sechead"><span class="tag">signals</span><div class="sechead-t"><h2>Reading Supplier Timelines</h2></div></div><div class="box tl"><div class="tl-row"><div class="tl-lvl tl-lvl-0">Uncommitted</div><div class="tl-phrase">“Should be fine”</div><div class="tl-mean">No specific date. No confirmation process. High risk.</div></div><div class="tl-row"><div class="tl-lvl tl-lvl-1">Delay tactic</div><div class="tl-phrase">“We'll confirm after deposit”</div><div class="tl-mean">Timeline unknown until you're committed. Medium-high risk.</div></div><div class="tl-row"><div class="tl-lvl tl-lvl-2">Professional</div><div class="tl-phrase">Delivery date + checkpoints</div><div class="tl-mean">Clear milestones. Accountability. Low risk.</div></div></div></section>
+<section class="sec"><div class="sechead"><span class="tag">buffer</span><div class="sechead-t"><h2>The Buffer Rule</h2></div></div><div class="box kv"><div class="kv-row"><div class="kv-k">Client says</div><div class="kv-v">We need these by Friday</div></div><div class="kv-row"><div class="kv-k">You hear</div><div class="kv-v">We need these by Thursday morning</div></div><div class="kv-row"><div class="kv-k">You tell supplier</div><div class="kv-v">We need these by Wednesday EOD</div></div><div class="kv-row"><div class="kv-k">You plan</div><div class="kv-v">Delivery Tuesday (1 day buffer for fixes)</div></div></div><div class="banner accent">→ 2 days buffer reduces stress by 80%. Worth it every time.</div></section>
+  </div>
+
+  <nav class="lnav">
+    <a class="prev" href="/lessons/5.html"><span class="lnav-k">← Lesson 5</span><span class="lnav-t">When Cheap Becomes Expensive</span></a>
+    <a class="next" href="/lessons/7.html"><span class="lnav-k">Lesson 7 →</span><span class="lnav-t">The Prototype Investment</span></a>
+  </nav>
+</main>
+<footer class="foot-bar">
+  <div><a href="/">textileplaybook.com</a></div>
+  <div class="lic"><a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">◆ CC BY-SA 4.0</a></div>
+  <div><a href="/impressum.html">Imprint</a> · <a href="/privacy-policy.html">Privacy</a></div>
+</footer>
+</body>
+</html>
