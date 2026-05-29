@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-<script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
-<link rel="stylesheet" href="/fonts/local-fonts.css">
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NK8VJHZS');</script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms &amp; Conditions — The Textile Playbook</title>
+<meta name="viewport" content="width= initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-
+<title>Terms &amp; Conditions — The Textile Playbook</title>
+<meta name="description" content="Terms of use for The Textile Playbook — free, open-source field guide under CC BY-SA 4.0.">
+<link rel="stylesheet" href="/fonts/local-fonts.css">
 <style>
   :root {
     --paper: #fafaf7;
@@ -51,23 +43,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .lede { font-size: 17px; line-height: 1.45; color: var(--ink2); margin: 0 0 16px; max-width: 640px; }
   .stamp { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2px; text-transform: uppercase; color: var(--mute); margin-bottom: 40px; }
 
-  .tldr { border: 1px solid var(--ink); background: var(--ink); color: #fff; padding: 22px 24px; margin-bottom: 34px; }
-  .tldr .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-  .tldr p { margin: 0 0 8px; font-size: 14px; line-height: 1.5; color: #eee; }
-  .tldr p:last-child { margin-bottom: 0; }
-
   h2 { font-size: 22px; font-weight: 600; letter-spacing: -0.4px; margin: 34px 0 12px; padding-top: 14px; border-top: 2px solid var(--ink); }
   h2 .n { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-right: 10px; letter-spacing: 0.1px; }
   h3 { font-size: 15px; font-weight: 600; letter-spacing: -0.2px; margin: 16px 0 6px; }
   p { font-size: 14px; line-height: 1.65; color: var(--ink2); margin: 0 0 10px; }
-  p.note { font-size: 12.5px; color: var(--mute); font-family: var(--mono); letter-spacing: 0.05px; line-height: 1.55; }
 
   ul, ol { margin: 6px 0 14px; padding-left: 22px; }
   ul li, ol li { font-size: 14px; line-height: 1.6; color: var(--ink2); margin-bottom: 4px; }
-
-  .kv { display: grid; grid-template-columns: 160px 1fr; gap: 10px 18px; font-size: 14px; border: 1px solid var(--ink); background: #fff; padding: 16px 18px; margin: 10px 0 8px; }
-  .kv .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15px; text-transform: uppercase; color: var(--mute); padding-top: 3px; }
-  .kv .v { color: var(--ink); line-height: 1.5; }
 
   .footer {
     display: grid; grid-template-columns: repeat(4, 1fr);
@@ -79,152 +61,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .footer a { color: inherit; text-decoration: none; }
   .footer a:hover { color: var(--accent); }
 
-  @media (max-width: 700px) {
+  @media (max-width: 600px) {
     .wrap { padding: 40px 22px; }
     .topbar { grid-template-columns: 1fr; }
     .topbar > div + div { border-left: none; border-top: 1px solid var(--ink); }
-    .kv { grid-template-columns: 1fr; gap: 4px; }
-    .kv .k { padding-top: 10px; }
     .footer { grid-template-columns: 1fr; }
-    .footer > div { border-right: none; border-bottom: 1px solid var(--ink); text-align: left !important; }
+    .footer > div { border-right: none; border-bottom: 1px solid var(--ink); }
   }
-
-/* CookieConsent overrides — match site style */
-.cc-window { background: #fff; border: 1px solid #0a0a0a; border-radius: 0 !important; font-family: "Space Grotesk", system-ui, sans-serif !important; }
-.cc-btn { border-radius: 0 !important; font-family: "JetBrains Mono", ui-monospace, monospace !important; font-size: 11.5px !important; font-weight: 500 !important; text-transform: uppercase; letter-spacing: 0.05px; padding: 10px 18px !important; }
-.cc-btn:first-child { background: #0a0a0a !important; color: #fff !important; border: 1px solid #0a0a0a !important; }
-.cc-btn:first-child:hover { background: #1a4eff !important; border-color: #1a4eff !important; }
-.cc-btn:not(:first-child) { background: transparent !important; color: #0a0a0a !important; border: 1px solid #0a0a0a !important; }
-.cc-btn:not(:first-child):hover { background: #0a0a0a !important; color: #fff !important; }
-.cc-link { color: #0a0a0a !important; text-decoration: underline; }
-.cc-floating { border-radius: 0 !important; }
-.cc-revoke { border-radius: 0 !important; font-family: "JetBrains Mono", ui-monospace, monospace !important; font-size: 10px !important; background: #0a0a0a; color: #fff; border: none; padding: 6px 12px; text-transform: uppercase; letter-spacing: 0.1px; }
-.cc-close { border-radius: 0 !important; }
-
 </style>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK8VJHZS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="topbar">
-  <div><span class="dot"></span> <a href="/" style="color: var(--ink);">textileplaybook.com</a></div>
-  <div class="center"><span>Terms &amp; Conditions</span> · <span style="color: var(--mute)">AGB</span></div>
-  <div class="right"><a href="/">← Back home</a></div>
+  <div><span class="dot"></span> textileplaybook.com</div>
+  <div class="center">
+    <a href="/"><span class="dot"></span> Home</a>
+    <a href="/lessons/"><span class="dot"></span> Lessons</a>
+    <a href="/agents.html"><span class="dot"></span> For AI Agents</a>
+  </div>
+  <div class="right">
+    <a href="/contact.html">Contact</a>
+  </div>
 </div>
 
 <div class="wrap">
   <div class="eyebrow">◆ Terms &amp; Conditions · Allgemeine Geschäftsbedingungen</div>
   <h1 class="title">Terms &amp; Conditions<span class="period">.</span></h1>
-  <p class="lede">These terms govern access to and use of the Textile Playbook, a digital field guide published by Get Map UG (haftungsbeschränkt). German law applies.</p>
-  <div class="stamp">Version 1.0 · Effective from February 2026</div>
-
-  <div class="tldr">
-    <div class="k">◆ The short version</div>
-    <p>You pay <strong>€89 once</strong> and get an access link to the interactive playbook. You can forward that link to anyone inside your company — no per-seat fees. Access is guaranteed for <strong>at least 1 year</strong> from purchase. You have a <strong>14-day right of withdrawal</strong>; we honour it even after you've started reading. Payment is handled by <strong>Paddle as merchant of record</strong>.</p>
-    <p>The rest of this page is the detailed version. Read it if anything's unclear, or ignore it if the summary above answered your question.</p>
-  </div>
+  <p class="lede">These terms govern access to and use of The Textile Playbook, a free open-source field guide published by Get Map UG (haftungsbeschränkt). Content is licensed under CC BY-SA 4.0. German law applies.</p>
+  <div class="stamp">Version 2.0 · Effective from May 2026</div>
 
   <h2><span class="n">01</span> Scope &amp; parties</h2>
-  <p>These Terms &amp; Conditions (hereinafter &ldquo;Terms&rdquo;) apply to all contracts concluded through the website <a href="https://textileplaybook.com">textileplaybook.com</a> (the &ldquo;Site&rdquo;) concerning access to the digital field guide &ldquo;The Textile Playbook&rdquo; (the &ldquo;Service&rdquo;).</p>
+  <p>These Terms &amp; Conditions (hereinafter &ldquo;Terms&rdquo;) apply to all use of the website <a href="https://textileplaybook.com">textileplaybook.com</a> (the &ldquo;Site&rdquo;) and the content published there (the &ldquo;Content&rdquo;).</p>
   <div class="kv">
-    <div class="k">Provider</div><div class="v">Get Map UG (haftungsbeschränkt) (the &ldquo;Provider&rdquo;)</div>
+    <div class="k">Publisher</div><div class="v">Get Map UG (haftungsbeschränkt) (the &ldquo;Publisher&rdquo;)</div>
     <div class="k">Address</div><div class="v">Klepperstr. 19, 83026 Rosenheim, Germany</div>
     <div class="k">Register</div><div class="v">Amtsgericht Traunstein, HRB 31192</div>
     <div class="k">Managing director</div><div class="v">Zoltan Varga</div>
     <div class="k">Contact</div><div class="v"><a href="mailto:hello@textileplaybook.com">hello@textileplaybook.com</a></div>
-    <div class="k">Customer</div><div class="v">The natural or legal person ordering the Service (&ldquo;Customer&rdquo; or &ldquo;you&rdquo;)</div>
   </div>
-  <p>Where the Customer is a <strong>consumer</strong> within the meaning of § 13 BGB, mandatory consumer protection provisions apply in addition to these Terms. Deviating general terms of the Customer are rejected unless the Provider expressly consents in writing.</p>
 
-  <h2><span class="n">02</span> Merchant of record</h2>
-  <p>Payment transactions on the Site are processed by <strong>Paddle.com Market Ltd.</strong> (and its affiliates, hereinafter &ldquo;Paddle&rdquo;), which acts as the <em>merchant of record</em>. The sales contract for the purchase of the Service is concluded between the Customer and Paddle; Paddle resells the Service to the Customer and is responsible for collection and remittance of applicable VAT.</p>
-  <p>The Provider delivers the Service itself. These Terms govern the Customer's access to and use of the Service provided by the Provider. Paddle's own terms and privacy policy apply to the payment transaction: see <a href="https://www.paddle.com/legal" target="_blank" rel="noopener">paddle.com/legal</a>.</p>
+  <h2><span class="n">02</span> The Content</h2>
+  <p>The Content consists of nine lessons covering textile printing and embroidery techniques, pricing benchmarks, supplier evaluation, and related guidance for the European branded apparel market. All content is provided as-is and free of charge.</p>
 
-  <h2><span class="n">03</span> The Service</h2>
-  <p>The Service consists of browser-based access to the interactive edition of &ldquo;The Textile Playbook&rdquo; published by the Provider, including:</p>
+  <h2><span class="n">03</span> Licence</h2>
+  <p>All content on the Site is published under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> licence, unless otherwise noted. In short:</p>
   <ul>
-    <li>all currently published lessons and appendices;</li>
-    <li>future content updates, errata and pricing-data refreshes released during the minimum access period (see § 07);</li>
-    <li>a personal access link that opens the Service in any modern web browser, without a download or local installation.</li>
+    <li><strong>Share</strong> — copy and redistribute the content in any medium or format.</li>
+    <li><strong>Adapt</strong> — remix, transform, and build upon the content.</li>
+    <li><strong>Attribution</strong> — credit The Textile Playbook (textileplaybook.com) as the original source.</li>
+    <li><strong>ShareAlike</strong> — if you remix or adapt, distribute your contributions under the same licence.</li>
   </ul>
-  <p>The Provider may alter, expand or reorganise the content of the Service at reasonable discretion provided that the overall scope and utility for the Customer remain substantially preserved.</p>
 
-  <h2><span class="n">04</span> Contract formation</h2>
-  <p>The presentation of the Service on the Site does not constitute a binding offer. By clicking a purchase button labelled &ldquo;Buy now&rdquo; (or similarly unambiguous wording indicating a paid order), the Customer is redirected to the Paddle checkout. The Customer reviews the order details, including the total price including VAT, on the Paddle checkout page and submits a binding offer by completing the payment. The sales contract with Paddle is concluded upon Paddle's confirmation of the successful payment. Immediately thereafter, the Provider makes the Service available to the Customer in accordance with § 05.</p>
-  <p>Paddle will send the Customer an order confirmation together with a VAT-compliant invoice to the email address provided at checkout.</p>
+  <h2><span class="n">04</span> Disclaimer</h2>
+  <p>The Content represents the Publisher's professional assessment of field-tested practice. It is provided for general guidance and does not constitute binding commercial advice for a specific transaction. Readers remain responsible for their own purchasing and production decisions.</p>
+  <p>The Publisher does not guarantee any particular commercial outcome, price, or financial saving from the use of the Content.</p>
+  <p>While every effort is made to keep the Content current, prices, supplier availability, and market conditions change. The Publisher reserves the right to update, amend, or expand the Content at any time.</p>
 
-  <h2><span class="n">05</span> Delivery &amp; access</h2>
-  <p>Following successful payment, the Provider sends an access link to the email address provided at checkout. The link is typically delivered within a few minutes. If the Customer does not receive the link within 24 hours (including in the spam folder), the Customer should contact the Provider at <a href="mailto:hello@textileplaybook.com">hello@textileplaybook.com</a>.</p>
-  <p>Access is browser-based. No physical goods are delivered and no download files are provided.</p>
-
-  <h2><span class="n">06</span> Prices &amp; payment</h2>
-  <p>The total price is <strong>€89.00</strong>, including applicable value added tax (VAT). VAT is calculated and collected by Paddle based on the Customer's country of residence. For consumers inside the European Union, the displayed price is the final price payable.</p>
-  <p>Accepted payment methods are determined by Paddle and may include major debit/credit cards, PayPal, Apple Pay, Google Pay, SEPA direct debit and others. The Customer pays in the currency offered by Paddle at checkout.</p>
-
-  <h2><span class="n">07</span> Minimum access term &amp; availability</h2>
-  <p>The Provider guarantees to keep the Service available to purchasing Customers for a period of <strong>at least one (1) year</strong> from the date of purchase (the &ldquo;Minimum Term&rdquo;). The Provider intends to maintain the Service indefinitely beyond the Minimum Term but reserves the right to discontinue the Service after expiry of the Minimum Term.</p>
-  <p>In the event of discontinuation after the Minimum Term, the Provider will:</p>
-  <ul>
-    <li>notify existing Customers by email at least sixty (60) days in advance;</li>
-    <li>make a downloadable archive of the content (e.g. a PDF export) available to existing Customers, for personal reference, for at least the statutory retention period.</li>
-  </ul>
-  <p>Short, planned maintenance windows and unavoidable technical outages do not constitute a breach of this availability guarantee. The Provider will use commercially reasonable efforts to keep such interruptions brief and to announce longer maintenance in advance.</p>
-
-  <h2><span class="n">08</span> Licence &amp; permitted use</h2>
-  <p>Upon successful payment, the Customer receives a non-exclusive, non-transferable, perpetual (within the limits of § 07) right to access and use the Service for internal purposes, subject to the following:</p>
-  <ol>
-    <li>The access link may be shared among employees, contractors and members of a single organisation operated by or employing the Customer (the &ldquo;Permitted Users&rdquo;). There is no per-user fee or seat limit within such an organisation.</li>
-    <li>The Service, the access link and the content may <strong>not</strong> be publicly distributed, resold, sublicensed, republished, or shared outside the Customer's organisation.</li>
-    <li>Automated mass retrieval of the content (scraping), bulk copying, or redistribution of substantial portions of the content to third parties is prohibited.</li>
-    <li>All intellectual property rights in the content remain with the Provider. No rights beyond those expressly granted herein are transferred.</li>
-  </ol>
-  <p>Breach of this licence entitles the Provider to revoke access without refund and to claim damages under general law.</p>
-
-  <h2><span class="n">09</span> Right of withdrawal (consumers)</h2>
-  <p>Consumers (§ 13 BGB) are entitled to a statutory right of withdrawal under § 355 BGB.</p>
-  <h3>Withdrawal instructions</h3>
-  <p>You have the right to withdraw from this contract within <strong>14 days</strong> without giving any reason. The withdrawal period is 14 days from the day on which the contract was concluded. To exercise your right of withdrawal, you must inform us (Get Map UG, Klepperstr. 19, 83026 Rosenheim, Germany; email: <a href="mailto:hello@textileplaybook.com">hello@textileplaybook.com</a>) by means of a clear statement (e.g. a letter sent by post or an email) of your decision to withdraw from this contract. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.</p>
-  <h3>Consequences of withdrawal</h3>
-  <p>If you withdraw from this contract, we shall reimburse you all payments received from you, without undue delay and not later than 14 days from the day on which we received notice of your withdrawal. We will use the same means of payment as you used for the initial transaction, unless expressly agreed otherwise.</p>
-  <h3>Digital content &amp; voluntary waiver</h3>
-  <p>Under § 356 (5) BGB, the statutory right of withdrawal may expire for digital content if the Customer has expressly consented to the immediate commencement of delivery and acknowledged that this consent results in the loss of the right of withdrawal. At the Paddle checkout, the Customer may be asked to give such consent.</p>
-  <p><strong>Voluntary policy:</strong> Independently of the statutory rule, the Provider voluntarily grants every Customer a <strong>14-day full refund</strong> from the date of purchase, even if digital delivery has already commenced. To request a refund, email <a href="mailto:hello@textileplaybook.com">hello@textileplaybook.com</a> with your order ID. Refunds are processed through Paddle.</p>
-
-  <h2><span class="n">10</span> Updates</h2>
-  <p>The Provider aims to update the content of the Service regularly. During the Minimum Term, all content updates, errata, and refreshes of pricing and benchmark data are included in the purchase price at no additional cost.</p>
-
-  <h2><span class="n">11</span> Warranty &amp; defects</h2>
-  <p>The statutory provisions on warranty for digital products (§§ 327 et seq. BGB) apply. The Provider warrants that the Service will be free of defects at the time of delivery and during the provision period, within the usage requirements and for the purposes described on the Site. In the event of a defect, the Customer may demand supplementary performance; if supplementary performance fails or is unreasonable, the Customer may terminate the contract or demand a reduction of the price, and may claim damages in accordance with statutory provisions.</p>
-  <p>The information in the Service (market prices, technique recommendations, supplier vetting guidance, etc.) represents the Provider's professional assessment of field-tested practice. It is provided for general guidance and does not constitute binding commercial advice for a specific transaction. Customers remain responsible for their own purchasing decisions.</p>
-
-  <h2><span class="n">12</span> Limitation of liability</h2>
-  <p>The Provider is liable without limitation for damages arising from injury to life, body or health caused by negligent or intentional breach of duty by the Provider or its legal representatives or vicarious agents, and for damages covered by liability under the Product Liability Act (Produkthaftungsgesetz).</p>
+  <h2><span class="n">05</span> Limitation of liability</h2>
+  <p>The Publisher is liable without limitation for damages arising from injury to life, body or health caused by negligent or intentional breach of duty by the Publisher or its legal representatives or vicarious agents.</p>
   <p>For other damages, the following applies:</p>
   <ul>
-    <li>For damages caused by intent or gross negligence, the Provider is liable without limitation.</li>
-    <li>For damages caused by simple negligence, the Provider is only liable for breach of a material contractual obligation (an obligation whose fulfilment is essential for the proper performance of the contract and on whose observance the Customer may regularly rely). In such cases, liability is limited to the foreseeable damage typical for this type of contract.</li>
-    <li>Any further liability of the Provider is excluded.</li>
+    <li>For damages caused by intent or gross negligence, the Publisher is liable without limitation.</li>
+    <li>For damages caused by simple negligence, the Publisher is only liable for breach of a material contractual obligation. In such cases, liability is limited to the foreseeable damage typical for this type of content.</li>
+    <li>Any further liability of the Publisher is excluded.</li>
   </ul>
-  <p>The Provider does not guarantee any particular commercial outcome or financial saving from the use of the Service.</p>
 
-  <h2><span class="n">13</span> Data protection</h2>
-  <p>Processing of personal data in connection with the Site and the Service is governed by the <a href="/privacy-policy.html">privacy policy</a>.</p>
+  <h2><span class="n">06</span> Data protection</h2>
+  <p>Processing of personal data in connection with the Site is governed by the <a href="/privacy-policy.html">privacy policy</a>.</p>
 
-  <h2><span class="n">14</span> Changes to these Terms</h2>
-  <p>The Provider may amend these Terms with effect for the future if required to reflect changes in applicable law, changes in the Service, or changes in the payment provider, provided that such amendments are reasonable for the Customer. The Provider will notify existing Customers of material changes by email. If the Customer objects to a change in writing within six (6) weeks of notification, the previous version of the Terms continues to apply to their existing contract.</p>
+  <h2><span class="n">07</span> Changes to these Terms</h2>
+  <p>The Publisher may amend these Terms to reflect changes in applicable law or the Content. Material changes will be noted on this page with an updated version number and effective date.</p>
 
-  <h2><span class="n">15</span> Final provisions</h2>
+  <h2><span class="n">08</span> Final provisions</h2>
   <h3>Applicable law</h3>
-  <p>These Terms and all contracts concluded on their basis are governed by the law of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. Mandatory consumer protection law of the Customer's country of habitual residence remains unaffected.</p>
+  <p>These Terms are governed by the law of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods.</p>
   <h3>Place of jurisdiction</h3>
-  <p>If the Customer is a merchant (Kaufmann), a legal person under public law, or a special fund under public law, the exclusive place of jurisdiction for all disputes arising from or in connection with the contractual relationship is Rosenheim, Germany. For consumers, the statutory rules of jurisdiction apply.</p>
-  <h3>Place of performance</h3>
-  <p>The place of performance for the Provider's obligation to provide and maintain the Service is the Provider's registered seat in Rosenheim, Germany (§ 269 BGB in conjunction with § 327b (3) BGB). The place of performance for the payment obligation is determined by the terms and conditions of Paddle (see § 02).</p>
+  <p>If the user is a merchant (Kaufmann), the exclusive place of jurisdiction for all disputes is Rosenheim, Germany. For consumers, the statutory rules of jurisdiction apply.</p>
   <h3>Online dispute resolution</h3>
-  <p>The European Commission provides a platform for online dispute resolution (ODR) at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. The Provider is not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board (Verbraucherschlichtungsstelle) within the meaning of § 36 VSBG.</p>
+  <p>The European Commission provides a platform for online dispute resolution at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. The Publisher is not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board (Verbraucherschlichtungsstelle) within the meaning of § 36 VSBG.</p>
   <h3>Severability</h3>
-  <p>Should any provision of these Terms be or become invalid or unenforceable in whole or in part, the validity of the remaining provisions shall not be affected. The invalid or unenforceable provision shall be replaced by a valid provision that most closely reflects the economic purpose of the invalid provision.</p>
+  <p>Should any provision of these Terms be or become invalid or unenforceable in whole or in part, the validity of the remaining provisions shall not be affected.</p>
 
 </div>
 
@@ -235,84 +151,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div><a href="/terms.html" style="color: var(--accent);">Terms</a></div>
 </div>
 
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ 'consent': { 'default': {
-  'ad_storage': 'wait',
-  'analytics_storage': 'wait',
-  'ad_user_data': 'granted',
-  'ad_personalization': 'granted',
-  'wait_for_update': 500
-}}});
-
-CookieConsent.run({
-  onModalReady: function() { console.log('[CC Debug] Modal ready'); },
-  onModalShow: function() { console.log('[CC Debug] Modal showing'); },
-  revision: 2,
-  hideFromBots: true,
-  cookie: { name: 'cc_cookie_v2' },
-  guiOptions: {
-    consentModal: { layout: 'cloud inline', position: 'bottom right', flipButtons: false },
-    preferencesModal: { layout: 'box' }
-  },
-  categories: {
-    necessary: { enabled: true, readOnly: true },
-    analytics: {}
-  },
-  language: {
-    default: 'en',
-    translations: {
-      en: {
-        consentModal: {
-          title: 'Cookie preferences',
-          description: 'This site uses Google Tag Manager to coordinate tracking cookies (currently: Matomo analytics). You can accept, reject, or customize your preferences below.',
-          acceptAllBtn: 'Accept all',
-          acceptNecessaryBtn: 'Reject all',
-          showPreferencesBtn: 'Cookie settings',
-          footer: '<a href="/privacy-policy.html" target="_blank">Privacy Policy</a>'
-        },
-        preferencesModal: {
-          title: 'Cookie preferences',
-          acceptAllBtn: 'Accept all',
-          acceptNecessaryBtn: 'Reject all',
-          savePreferencesBtn: 'Save preferences',
-          closeIconLabel: 'Close',
-          sections: [
-            { title: 'Your privacy choices', description: 'You can change your preferences at any time using the Cookie Settings link in the footer.' },
-            { title: 'Necessary', description: 'Required for the site to function.', linkedCategory: 'necessary' },
-            { title: 'Analytics', description: 'Matomo tracks your visit (IP, pages, device) to understand how people use the site.', linkedCategory: 'analytics' }
-          ]
-        }
-      }
-    }
-  },
-  onFirstConsent: function() { applyConsent(); },
-  onConsent: function() { applyConsent(); },
-  onChange: function() { applyConsent(); },
-});
-
-function applyConsent(status) {
-  var analyticsEnabled = true;
-  try {
-    var cookie = document.cookie;
-    if (cookie.indexOf('cc_cookie') > -1) {
-      var decoded = JSON.parse(decodeURIComponent(cookie.split('cc_cookie=')[1].split(';')[0]));
-      if (decoded && decoded.categories) {
-        analyticsEnabled = decoded.categories.indexOf('analytics') > -1;
-      }
-    }
-  } catch(e) { analyticsEnabled = true; }
-  if (status === 'revoke') { analyticsEnabled = false; }
-  var analytics = analyticsEnabled ? 'granted' : 'denied';
-  window.dataLayer.push({ 'consent': { 'update': {
-    'analytics_storage': analytics,
-    'ad_storage': 'denied',
-    'ad_user_data': analytics,
-    'ad_personalization': 'denied'
-  }}});
-}
-</script>
-
 </body>
 </html>
-
