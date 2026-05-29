@@ -47,6 +47,7 @@ jobs:
       - name: Deploy with rsync
         run: |
           rsync -avz \
+            --rsync-path="sudo rsync" \
             -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
             website/ \
             "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_TARGET }}"
