@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://textileplaybook.com/sitemap.xml
