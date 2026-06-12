@@ -262,13 +262,14 @@ function Para({ s }) {
 }
 
 function Compare({ s }) {
+  const cols = s.c ? [s.a, s.b, s.c] : [s.a, s.b];
   return (
     <div style={{ marginBottom: 22 }}>
       <SecHead kind="example" title={s.heading} />
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0, border: `1px solid ${THEME.ink}` }}>
-        {[s.a, s.b].map((c, i) => (
-          <div key={i} style={{ borderRight: i === 0 ? `1px solid ${THEME.ink}` : 'none', background: i === 1 ? THEME.accentSoft : '#fff' }}>
-            <div style={{ padding: '8px 12px', background: i === 1 ? THEME.accent : THEME.ink, color: '#fff', fontFamily: THEME.mono, fontSize: 10, letterSpacing: 0.15, textTransform: 'uppercase' }}>{c.label}</div>
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols.length}, 1fr)`, gap: 0, border: `1px solid ${THEME.ink}` }}>
+        {cols.map((c, i) => (
+          <div key={i} style={{ borderRight: i < cols.length - 1 ? `1px solid ${THEME.ink}` : 'none', background: i > 0 ? THEME.accentSoft : '#fff' }}>
+            <div style={{ padding: '8px 12px', background: i > 0 ? THEME.accent : THEME.ink, color: '#fff', fontFamily: THEME.mono, fontSize: 10, letterSpacing: 0.15, textTransform: 'uppercase' }}>{c.label}</div>
             <div style={{ padding: 12 }}>
               <div style={{ fontFamily: THEME.sans, fontSize: 13, fontWeight: 500, color: THEME.ink, marginBottom: 10, lineHeight: 1.35 }}>{c.title}</div>
               {c.stats.map((st, j) => (

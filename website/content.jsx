@@ -259,14 +259,19 @@ const LESSONS = [
         a: {
           label: "Designer wants",
           title: "Full-back photorealistic, DTF on hoodies",
-          stats: [["Cost", "\u20AC18/piece"], ["Feel", "Plastic"], ["Durability", "Cracks after 10 washes"]],
+          stats: [["Cost", "\u20AC18/piece"], ["Presence", "Full back"], ["Feel", "Plastic"], ["Durability", "Cracks after 10 washes"]],
         },
         b: {
-          label: "Alternative",
+          label: "Alternative 1",
           title: "10cm chest logo, simplified vector, embroidered",
-          stats: [["Cost", "\u20AC6/piece"], ["Feel", "Premium"], ["Durability", "Lasts years"]],
+          stats: [["Cost", "\u20AC6/piece"], ["Presence", "Chest only"], ["Feel", "Premium"], ["Durability", "Lasts years"]],
         },
-        footer: "Same brand presence. Better execution. Lower cost.",
+        c: {
+          label: "Alternative 2",
+          title: "Simplified outline back logo, embroidered",
+          stats: [["Cost", "\u20AC18/piece"], ["Presence", "Full back"], ["Feel", "Premium"], ["Durability", "Lasts years"]],
+        },
+        footer: "A chest logo isn't a full-back print, so pick by goal: spend less with the chest logo, or keep the back presence for the same money with outline embroidery that actually lasts.",
       },
     ],
   },

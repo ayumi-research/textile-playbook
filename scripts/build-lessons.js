@@ -173,8 +173,10 @@ function renderCompare(s) {
     return `<div class="col${accent ? ' soft' : ''}"><div class="colhead${accent ? ' accent' : ''}">${esc(c.label)}</div>`
       + `<div class="col-body"><div class="cmp-title">${esc(c.title)}</div>${stats}</div></div>`;
   };
+  const cols = [col(s.a, false), col(s.b, true)];
+  if (s.c) cols.push(col(s.c, true));
   return `<section class="sec">${secHead('example', s.heading)}`
-    + `<div class="box cols2">${col(s.a, false)}${col(s.b, true)}</div>`
+    + `<div class="box ${s.c ? 'cols3' : 'cols2'}">${cols.join('')}</div>`
     + (s.footer ? `<div class="banner dark">${esc(s.footer)}</div>` : '') + `</section>`;
 }
 

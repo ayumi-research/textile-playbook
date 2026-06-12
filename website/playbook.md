@@ -224,10 +224,15 @@ Suppliers won't suggest changes unless you ask. They'll quote your complex desig
 **Designer wants:** Full-back photorealistic image, DTF printed on hoodies  
 **Reality:** €18/piece, feels like plastic, cracks after 10 washes
 
-**Alternative:** 10cm chest logo, simplified vector, embroidered  
-**Result:** €6/piece, looks premium, lasts years
+A chest logo is *not* the same as a full-back print — don't pretend it is. Pick the alternative by your actual goal:
 
-**Same brand presence. Better execution. Lower cost.**
+**Alternative 1 — spend less:** 10cm chest logo, simplified vector, embroidered  
+**Result:** €6/piece, premium feel, lasts years — but the branding moves to the chest
+
+**Alternative 2 — keep the back presence:** Simplified *outline* back logo, embroidered  
+**Result:** ~€18/piece (about the same as the DTF), premium feel, lasts years — similar back presence, far better execution
+
+**A chest logo isn't a full-back print. Either spend less with the chest logo, or keep the back presence for the same money with outline embroidery that actually lasts.**
 
 ---
 
