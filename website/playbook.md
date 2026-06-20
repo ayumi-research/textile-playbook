@@ -50,6 +50,8 @@ A technique mismatch costs €2,000 and a client relationship. The "cheap" DTF p
 | Textile | Technique | What Goes Wrong |
 |---------|-----------|-----------------|
 | **Light/sheer T-shirts** | Embroidery with small text | Destroys fabric, puckering, holes |
+
+> **EU workwear note:** Hi-vis, flame-resistant, and other safety-certified garments (CE-marked, EN standards) have specific decoration constraints — embroidery can compromise reflective tape, and some adhesives don't pass wash testing. Always verify technique compatibility with the garment's safety certification before quoting.
 | **Fluffy fleece/Sherpa jackets** | DTF/Screen print | Ink sits on surface, doesn't adhere, looks cheap |
 | **Two-sided items** (bags, reversible) | Embroidery | Backside is ugly, limits use |
 | **Underwear/base layers** | Embroidery | Backside scratches skin, uncomfortable |
@@ -66,7 +68,7 @@ A technique mismatch costs €2,000 and a client relationship. The "cheap" DTF p
 - Light T-shirts: Use DTF or small outline embroidery (no fill)
 - Sherpa/fleece: Must embroider — print won't stick
 - Two-sided: Large appliqué (covered back) or print only
-- Base layers: Print or laser-etched, never embroidery
+- Base layers: Print or silicone-print labels, never embroidery
 - Waterproof: Embroidery + heat-sealed waterproof backing (ask for it)
 - Towels: Embroidery only — industry standard, print looks bad
 
@@ -134,7 +136,7 @@ Every embroidery quote breaks down into:
 
 ## Real Economics
 
-**Cheap caps with 2-3 logos:**
+**Cheap caps with 1 logo:**
 - Cap wholesale: €1.50
 - Your target margin: 30%
 - Decoration cost: €2.50
@@ -222,7 +224,7 @@ Suppliers won't suggest changes unless you ask. They'll quote your complex desig
 ## Example
 
 **Designer wants:** Full-back photorealistic image, DTF printed on hoodies  
-**Reality:** €18/piece, feels like plastic, cracks after 10 washes
+**Reality:** €18/piece, feels like plastic, can degrade — poor application cracks within 10 washes, quality application lasts 30-50+
 
 A chest logo is *not* the same as a full-back print — don't pretend it is. Pick the alternative by your actual goal:
 
@@ -316,6 +318,8 @@ Catches the "we'll figure it out" approach before it becomes your problem.
 - **4-5 points:** Manageable with explicit written agreements
 - **0-3 points:** High risk
 
+> **For corporate clients:** If your buyer has sustainability mandates, also ask about material certifications — REACH compliance (EU chemical safety) and OEKO-TEX (textile testing for harmful substances) are the baseline standards. A supplier who can't document either may lose you the client later regardless of operational competence.
+
 ---
 
 *Part of The Textile Playbook*  
@@ -340,8 +344,8 @@ Learn to spot the five cheap traps before you fall in. Save the relationship, no
 **The pitch:** "Same design, €3 vs €7. Big savings on 500 pieces!"
 
 **The reality:**
-- €3: DTF on cheap cotton, heat-pressed at lower temp
-- €7: Embroidery on quality fabric, proper stitch density
+- €3: DTF on cheap cotton, heat-pressed at lower temp (poor application cracks within 10 washes)
+- €7: Embroidery on quality fabric, proper stitch density (quality DTF with correct application lasts 30-50+ washes, but at this price point you're getting cheap work)
 
 **The math:**
 - Cheap: 500 × €3 = €1,500 + replacement €1,500 + damaged relationship
@@ -411,6 +415,8 @@ Learn to spot the five cheap traps before you fall in. Save the relationship, no
 | Deadline-critical | ×1.5 | Event date, no buffer |
 | Quality-sensitive | ×1.5 | Workwear, long-term use |
 | Single supplier | ×1.3 | No backup option |
+
+**This is a directional heuristic for rough risk assessment, not a precise formula.** The multipliers are estimates — adjust them based on your specific situation and supplier history.
 
 ---
 
@@ -544,13 +550,13 @@ Every rushed order is a risk multiplier. The fee isn't the problem — the lack 
 
 ---
 
-# Lesson 7: The Prototype Investment — Why €30 Now Saves €2,000 Later
+# Lesson 7: The Prototype Investment — Why a Sample Now Saves €2,000 Later
 
 **Quick Summary:**  
-Sampling isn't optional for anything that matters. A €30 prototype eliminates 80% of pre-production risk before you're committed to 500 pieces.
+Sampling isn't optional for anything that matters. A prototype eliminates 80% of pre-production risk before you're committed to 500 pieces.
 
 **Why This Saves You:**  
-The €30 prototype is insurance. Skip it when you can afford to be wrong.
+The cost of a sample is insurance. Skip it when you can afford to be wrong.
 
 ---
 
@@ -625,10 +631,12 @@ PDF proofs don't show: color on actual fabric, texture, weight, drape, decoratio
 
 ---
 
-## The €30 Math
+## The Prototype Math
+
+Prototype costs vary by technique: €20-50 for DTF/transfers, €50-100+ for embroidery (includes digitizing + setup + garment). Even at the high end, the math works.
 
 **Scenario A: Prototype**
-- Cost: €30
+- Cost: €50 (€30-100 depending on technique)
 - Time: +1 week
 - Risk: Low (80% of issues caught)
 - Rework needed: 5% of orders
@@ -637,9 +645,9 @@ PDF proofs don't show: color on actual fabric, texture, weight, drape, decoratio
 - Cost: €0
 - Time: -1 week (seems faster)
 - Risk: High (80% of issues go live)
-- Rework needed: 40% of orders × €2,000 average = €800 expected cost
+- Rework needed: ~15-30% of first-time or complex orders × €2,000 average = €300-600 expected cost
 
-**Expected value:** €30 prototype saves €770 per order on average (for high-exposure orders).
+**Expected value:** A €50 prototype saves €250-550 per order on average (for high-exposure orders).
 
 ---
 
@@ -648,7 +656,7 @@ PDF proofs don't show: color on actual fabric, texture, weight, drape, decoratio
 | Prototype | When to Use | Cost |
 |-----------|-------------|------|
 | **Digital mockup** | Initial approval, layout confirmation | Free/€10 |
-| **Single physical** | Standard orders, repeat suppliers | €20-50 |
+| **Single physical** | Standard orders, repeat suppliers | €30-100 (varies by technique) |
 | **Size run** | Garments (S, M, L, XL) to check fit across range | €50-150 |
 | **Color/technique matrix** | Testing 3 colors × 2 techniques before deciding | €100-300 |
 | **Pre-production sample** | First 5 pieces from actual production run | Cost of goods |
@@ -660,7 +668,7 @@ PDF proofs don't show: color on actual fabric, texture, weight, drape, decoratio
 **Client:** "We don't have time/budget for a sample."  
 **Translation:** "We can't afford to get this wrong, but we're not going to verify it's right."
 
-**Your response:** "I understand the pressure. Here's the risk: if color/position is off, we're looking at a full re-run at €X and Y weeks delay. The prototype is €30 insurance against that. Worth 10 minutes to discuss?"
+**Your response:** "I understand the pressure. Here's the risk: if color/position is off, we're looking at a full re-run at €X and Y weeks delay. A sample is €50 insurance against that. Worth 10 minutes to discuss?"
 
 **Frame it:** Not as delay/cost. As risk management.
 
@@ -1023,11 +1031,11 @@ Walk into a supplier negotiation knowing what "fair" looks like. Spot the padded
 - Polos: €10 × 200 = €2,000
 - Embroidery: €4 × 200 = €800
 - Digitizing: €50 ÷ 200 = €0.25
-- Supplier margin (40%): €1,540
+- Supplier margin (40%): €1,170
 - Shipping: €75
-- **Fair price: ~€4,465** or €22.33/piece delivered
+- **Fair price: ~€4,095** or ~€20.50/piece delivered
 
-If the quote is €3,500 — ask where they're cutting. If it's €6,000 — ask why.
+If the quote is €3,200 — ask where they're cutting. If it's €5,500 — ask why.
 
 ---
 
@@ -1059,10 +1067,10 @@ Never negotiate on sticker price. Negotiate on delivered cost.
 ---
 
 *Part of The Textile Playbook*  
-*Next: Lesson 10 — Supplier Relationship Management (or Lesson 11 — Seasonal Strategy)*
+*Next: coming soon*
 
 ---
 
-*The Textile Playbook — First Edition*
+*The Textile Playbook — First Edition · June 2026 (pricing refreshed)*
 
-*For questions: contact [to be added]*
+*Questions or corrections? textileplaybook.com/contact.html*
