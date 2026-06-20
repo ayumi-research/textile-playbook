@@ -427,6 +427,11 @@ const LESSONS = [
         ],
       },
       {
+        kind: "paragraph",
+        heading: "How to read these multipliers",
+        body: "This is a directional heuristic for rough risk assessment, not a precise formula. The multipliers are estimates \u2014 adjust them based on your specific situation and supplier history.",
+      },
+      {
         kind: "rule",
         heading: "The One-Third Rule",
         list: [
