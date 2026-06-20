@@ -31,7 +31,7 @@ const TAKEAWAYS = {
   4: "Named contact + proof process + per-piece QC = operational foundation.",
   5: "Price \u00D7 Risk Factor = True Cost. Client-facing work is \u00D72 by default.",
   6: "The rush fee isn\u2019t the problem. The lack of buffer is.",
-  7: "\u20AC30 prototype on a \u20AC2,000 order is insurance, not overhead.",
+  7: "A \u20AC50 sample on a \u20AC2,000 order is insurance, not overhead.",
   8: "A supplier\u2019s response to the first mistake is your real contract.",
   9: "Walk into negotiations with ranges, not asks. \u201CI\u2019m seeing \u20ACX\u2013\u20ACY\u201D beats \u201CCan you do \u20ACX?\u201D",
 };
@@ -43,7 +43,7 @@ const TOC = [
   { n: 4, t: "The Three Questions That Expose Bad Suppliers", l: "Vet suppliers before they become your problem" },
   { n: 5, t: "When Cheap Becomes Expensive", l: "Avoid the five cheap traps" },
   { n: 6, t: "Timeline Management Without Panic", l: "Handle rush jobs and seasonal delays" },
-  { n: 7, t: "The Prototype Investment", l: "When \u20AC30 saves \u20AC2,000" },
+  { n: 7, t: "The Prototype Investment", l: "Why a sample saves \u20AC2,000" },
   { n: 8, t: "When Things Go Wrong", l: "Fix problems without breaking relationships" },
   { n: 9, t: "Pricing Benchmarks That Actually Exist", l: "Real numbers for negotiation" },
 ];
@@ -54,7 +54,7 @@ const LESSONS = [
     n: 1,
     title: "The Technique You Pick Determines Your Quality Ceiling",
     summary: "Embroidery, DTG, screen print, transfer \u2014 each technique locks you into specific durability, cost, and visual outcomes. Pick the wrong one and you're explaining to your client why their premium jackets look like expo freebies.",
-    saves: "A technique mismatch costs \u20AC2,000 and a client relationship. The \u201Ccheap\u201D DTF print on workwear that peels after 5 washes. The \u201Cpremium\u201D embroidery that takes 2 weeks when the event is in 3 days. Get this right and everything else flows.",
+    saves: "A technique mismatch costs \u20AC2,000 and a client relationship. The \u201Ccheap\u201D DTF print on workwear that peels within 10 washes with poor application. The \u201Cpremium\u201D embroidery that takes 2 weeks when the event is in 3 days. Get this right and everything else flows.",
     sections: [
       {
         kind: "table",
@@ -89,7 +89,7 @@ const LESSONS = [
           ["Light T-shirts", "DTF or small outline embroidery (no fill)"],
           ["Sherpa / fleece", "Must embroider \u2014 print won't stick"],
           ["Two-sided", "Large appliqu\u00E9 (covered back) or print only"],
-          ["Base layers", "Print or laser-etched, never embroidery"],
+          ["Base layers", "Print or silicone-print labels, never embroidery"],
           ["Waterproof", "Embroidery + heat-sealed waterproof backing"],
           ["Towels", "Embroidery only \u2014 industry standard, print looks bad"],
         ],
@@ -161,7 +161,7 @@ const LESSONS = [
         heading: "Real Economics",
         cards: [
           {
-            title: "Cheap caps with 2\u20133 logos",
+            title: "Cheap caps with 1 logo",
             rows: [
               ["Cap wholesale", "\u20AC1.50"],
               ["Target margin", "30%"],
@@ -259,7 +259,7 @@ const LESSONS = [
         a: {
           label: "Designer wants",
           title: "Full-back photorealistic, DTF on hoodies",
-          stats: [["Cost", "\u20AC18/piece"], ["Presence", "Full back"], ["Feel", "Plastic"], ["Durability", "Cracks after 10 washes"]],
+          stats: [["Cost", "\u20AC18/piece"], ["Presence", "Full back"], ["Feel", "Plastic"], ["Durability", "Poor: cracks ~10 washes, quality: 30-50+"]],
         },
         b: {
           label: "Alternative 1",
@@ -360,7 +360,7 @@ const LESSONS = [
             sub: "Durability vs. price",
             pitch: "\u201CSame design, \u20AC3 vs \u20AC7. Big savings on 500 pieces!\u201D",
             reality: [
-              ["\u20AC3", "DTF on cheap cotton, heat-pressed at lower temp"],
+              ["\u20AC3", "DTF on cheap cotton, heat-pressed at lower temp (poor application cracks within 10 washes)"],
               ["\u20AC7", "Embroidery on quality fabric, proper stitch density"],
             ],
             math: [
@@ -545,8 +545,8 @@ const LESSONS = [
   {
     n: 7,
     title: "The Prototype Investment",
-    summary: "Sampling isn't optional for anything that matters. A \u20AC30 prototype eliminates 80% of pre-production risk before you're committed to 500 pieces.",
-    saves: "The \u20AC30 prototype is insurance. Skip it when you can afford to be wrong.",
+    summary: "Sampling isn't optional for anything that matters. A prototype eliminates 80% of pre-production risk before you're committed to 500 pieces.",
+    saves: "The cost of a sample is insurance. Skip it when you can afford to be wrong.",
     sections: [
       {
         kind: "table",
@@ -606,18 +606,18 @@ const LESSONS = [
       },
       {
         kind: "economics",
-        heading: "The \u20AC30 Math",
+        heading: "The Prototype Math",
         cards: [
           {
             title: "Scenario A \u2014 Prototype",
-            rows: [["Cost", "\u20AC30"], ["Time", "+1 week"], ["Risk", "Low (80% caught)"], ["Rework", "5% of orders"]],
+            rows: [["Cost", "\u20AC50"], ["Time", "+1 week"], ["Risk", "Low (80% caught)"], ["Rework", "5% of orders"]],
           },
           {
             title: "Scenario B \u2014 No prototype",
-            rows: [["Cost", "\u20AC0"], ["Time", "\u20131 week"], ["Risk", "High (80% go live)"], ["Rework", "40% \u00D7 \u20AC2,000 = \u20AC800 expected"]],
+            rows: [["Cost", "\u20AC0"], ["Time", "\u20131 week"], ["Risk", "High (80% go live)"], ["Rework", "~15\u201330% \u00D7 \u20AC2,000 = \u20AC300\u2013600 expected"]],
           },
         ],
-        footer: "\u20AC30 prototype saves \u20AC770 per order on average for high-exposure orders.",
+        footer: "Prototype costs vary by technique: \u20AC20\u201350 for DTF/transfers, \u20AC50\u2013100+ for embroidery. Even at the high end, the math works",
       },
       {
         kind: "table",
@@ -625,7 +625,7 @@ const LESSONS = [
         cols: ["Prototype", "When to use", "Cost"],
         rows: [
           ["Digital mockup", "Initial approval, layout confirmation", "Free \u2013 \u20AC10"],
-          ["Single physical", "Standard orders, repeat suppliers", "\u20AC20\u201350"],
+          ["Single physical", "Standard orders, repeat suppliers", "\u20AC30\u2013100 (varies by technique)"],
           ["Size run", "Garments S\u2013XL to check fit", "\u20AC50\u2013150"],
           ["Color / technique matrix", "3 colors \u00D7 2 techniques before deciding", "\u20AC100\u2013300"],
           ["Pre-production sample", "First 5 pieces from actual run", "Cost of goods"],
@@ -636,7 +636,7 @@ const LESSONS = [
         heading: "The \u201CCan't Afford a Prototype\u201D Fallacy",
         client: "\u201CWe don't have time / budget for a sample.\u201D",
         translation: "\u201CWe can't afford to get this wrong, but we're not going to verify it's right.\u201D",
-        response: "\u201CI understand the pressure. Here's the risk: if color / position is off, we're looking at a full re-run at \u20ACX and Y weeks delay. The prototype is \u20AC30 insurance against that. Worth 10 minutes to discuss?\u201D",
+        response: "\u201CI understand the pressure. Here's the risk: if color / position is off, we're looking at a full re-run at \u20ACX and Y weeks delay. A sample is \u20AC50 insurance against that. Worth 10 minutes to discuss?\u201D",
         frame: "Not as delay / cost. As risk management.",
       },
     ],
